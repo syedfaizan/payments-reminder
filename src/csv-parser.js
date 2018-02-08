@@ -1,5 +1,5 @@
 const fs = require('fs');
-const NEWLINE_CHAR = '\n';
+const NEWLINE_CHAR = '\r\n';
 
 /**
  * Reads a file from the filesystem
@@ -30,7 +30,7 @@ const toJSON = ( fileContent ) => {
         out[ headers[2] ] = item.pop(); // extract schedule
         out[ headers[1] ] = item.join(',').replace(/"/g,''); // removing the extra quotes, eg ""abc"" => "abc"
         return out;
-    })
+    });
     
 };
 

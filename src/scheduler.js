@@ -46,7 +46,7 @@ const sendReminders = ( timer, customers , timerId ) => {
           }
         })
         .catch( err => {
-          clearInterval( timerId )
+          clearInterval( timerId );
           console.error( err.message, "\nPlease make sure that Commserice is running" );
         })
     }
@@ -74,4 +74,4 @@ module.exports = {
     prepareJSON,
     sendReminders,
     init
-}
+};
